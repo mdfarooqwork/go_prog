@@ -1,0 +1,20 @@
+1) Main.go
+package main
+import (
+"fmt"
+"myproject/models")
+func main() {
+u := models.User{
+Name: "Alice",
+Age: 30,}
+fmt.Println("User Profile:")
+fmt.Printf("Name: %s\n", u.Name)
+fmt.Printf("Age: %d\n", u.Age) }
+2) User.go
+package models
+type User struct {
+Name string
+Age int }
+3) Go.mod
+module myproject
+go 1.21
