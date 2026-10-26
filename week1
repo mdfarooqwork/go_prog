@@ -1,0 +1,17 @@
+package main
+import "fmt"
+func main() {
+ var a, b, x, y, gcd, lcm int
+ fmt.Print("Enter two numbers: ")
+ fmt.Scan(&a, &b)
+ x = a
+ y = b
+ for y != 0 {
+ temp := y
+ y = x % y
+ x = temp
+ }
+ gcd = x
+ lcm = (a * b) / gcd
+ fmt.Println("GCD =", gcd)
+ fmt.Println("LCM =", lcm)}
